@@ -1,0 +1,48 @@
+maryb@Karen MINGW64 /d/GitRepo2 (master)
+$ cd /d
+
+maryb@Karen MINGW64 /d
+$ mkdir GitRepos2
+
+maryb@Karen MINGW64 /d
+$ cd GitRepos2
+
+maryb@Karen MINGW64 /d/GitRepos2
+$ git init
+Initialized empty Git repository in D:/GitRepos2/.git/
+
+maryb@Karen MINGW64 /d/GitRepos2 (master)
+$ git clone https://github.com/merrew/GitTest2.git test2
+Cloning into 'test2'...
+warning: You appear to have cloned an empty repository.
+
+maryb@Karen MINGW64 /d/GitRepos2 (master)
+$ cd test2
+
+maryb@Karen MINGW64 /d/GitRepos2/test2 (main)
+$ echo "Second repository file." > secondRepos.txt
+
+maryb@Karen MINGW64 /d/GitRepos2/test2 (main)
+$ git add secondRepos,txt
+fatal: pathspec 'secondRepos,txt' did not match any files
+
+maryb@Karen MINGW64 /d/GitRepos2/test2 (main)
+$ git add secondRepos.txt
+warning: in the working copy of 'secondRepos.txt', LF will be replaced by CRLF the next time Git touches it
+
+maryb@Karen MINGW64 /d/GitRepos2/test2 (main)
+$ git commit -m "Initial commit for second repository"
+[main (root-commit) 19b4a13] Initial commit for second repository
+ 1 file changed, 1 insertion(+)
+ create mode 100644 secondRepos.txt
+
+maryb@Karen MINGW64 /d/GitRepos2/test2 (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 388 bytes | 388.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/merrew/GitTest2.git
+b549435. . 8a31fb7 main -> main
